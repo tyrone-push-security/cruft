@@ -473,8 +473,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nocruftfound" class="md-nav__link">
-    NoCruftFound
+  <a href="#invalidcookiecutterrepository" class="md-nav__link">
+    InvalidCookiecutterRepository
   </a>
   
     <nav class="md-nav">
@@ -520,8 +520,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#unabletofindcookiecuttertemplate" class="md-nav__link">
-    UnableToFindCookiecutterTemplate
+  <a href="#nocruftfound" class="md-nav__link">
+    NoCruftFound
   </a>
   
     <nav class="md-nav">
@@ -551,6 +551,53 @@
         
           <li class="md-nav__item">
   <a href="#with_traceback_2" class="md-nav__link">
+    with_traceback
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unabletofindcookiecuttertemplate" class="md-nav__link">
+    UnableToFindCookiecutterTemplate
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_3" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_3" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_3" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with_traceback_3" class="md-nav__link">
     with_traceback
   </a>
   
@@ -699,8 +746,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nocruftfound" class="md-nav__link">
-    NoCruftFound
+  <a href="#invalidcookiecutterrepository" class="md-nav__link">
+    InvalidCookiecutterRepository
   </a>
   
     <nav class="md-nav">
@@ -746,8 +793,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#unabletofindcookiecuttertemplate" class="md-nav__link">
-    UnableToFindCookiecutterTemplate
+  <a href="#nocruftfound" class="md-nav__link">
+    NoCruftFound
   </a>
   
     <nav class="md-nav">
@@ -777,6 +824,53 @@
         
           <li class="md-nav__item">
   <a href="#with_traceback_2" class="md-nav__link">
+    with_traceback
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unabletofindcookiecuttertemplate" class="md-nav__link">
+    UnableToFindCookiecutterTemplate
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_3" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_3" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_3" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with_traceback_3" class="md-nav__link">
     with_traceback
   </a>
   
@@ -828,7 +922,7 @@
 
     <span class="s2">&quot;&quot;&quot;</span><span class="s">Raised when Cruft is unable to find a cookiecutter template</span><span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="nv">def</span> <span class="nv">__init__</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">directory</span><span class="ss">)</span>:
+    <span class="nv">def</span> <span class="nv">__init__</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">directory</span>: <span class="nv">str</span><span class="ss">)</span>:
 
         <span class="nv">super</span><span class="ss">()</span>.<span class="nv">__init__</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">f</span><span class="s2">&quot;</span><span class="s">Was unable to locate a Cookiecutter template in `{directory}` !</span><span class="s2">&quot;</span><span class="ss">)</span>
 
@@ -838,7 +932,7 @@
 
     <span class="s2">&quot;&quot;&quot;</span><span class="s">Raised when no .cruft.json state is found in the current directory</span><span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="nv">def</span> <span class="nv">__init__</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">directory</span><span class="ss">)</span>:
+    <span class="nv">def</span> <span class="nv">__init__</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">directory</span>: <span class="nv">str</span><span class="ss">)</span>:
 
         <span class="nv">super</span><span class="ss">()</span>.<span class="nv">__init__</span><span class="ss">(</span>
 
@@ -847,6 +941,12 @@
         <span class="ss">)</span>
 
         <span class="nv">self</span>.<span class="nv">directory</span> <span class="o">=</span> <span class="nv">directory</span>
+
+<span class="nv">class</span> <span class="nv">InvalidCookiecutterRepository</span><span class="ss">(</span><span class="nv">CruftError</span><span class="ss">)</span>:
+
+    <span class="s2">&quot;&quot;&quot;</span><span class="s">Raised when an invalid cookiecutter repository is provided</span><span class="s2">&quot;&quot;&quot;</span>
+
+    <span class="nv">pass</span>
 </pre></div>
 
 
@@ -879,6 +979,7 @@
 <ul>
 <li>cruft.exceptions.UnableToFindCookiecutterTemplate</li>
 <li>cruft.exceptions.NoCruftFound</li>
+<li>cruft.exceptions.InvalidCookiecutterRepository</li>
 </ul>
 <h4 id="class-variables">Class variables</h4>
 <div class="codehilite"><pre><span></span><span class="n">args</span>
@@ -895,27 +996,21 @@
 
 <p>Exception.with_traceback(tb) --
 set self.<strong>traceback</strong> to tb and return self.</p>
-<h3 id="nocruftfound">NoCruftFound</h3>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">NoCruftFound</span><span class="p">(</span>
-    <span class="n">directory</span>
+<h3 id="invalidcookiecutterrepository">InvalidCookiecutterRepository</h3>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">InvalidCookiecutterRepository</span><span class="p">(</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
 <span class="p">)</span>
 </pre></div>
 
 
-<p>Raised when no .cruft.json state is found in the current directory</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="n">NoCruftFound</span>(<span class="n">CruftError</span>):
+<p>Raised when an invalid cookiecutter repository is provided</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="n">InvalidCookiecutterRepository</span>(<span class="n">CruftError</span>):
 
-    <span class="s">&quot;&quot;&quot;Raised when no .cruft.json state is found in the current directory&quot;&quot;&quot;</span>
+    <span class="s">&quot;&quot;&quot;Raised when an invalid cookiecutter repository is provided&quot;&quot;&quot;</span>
 
-    <span class="n">def</span> <span class="n">__init__</span>(<span class="k">self</span>, <span class="n">directory</span>):
-
-        <span class="n">super</span>().<span class="n">__init__</span>(
-
-            <span class="k">self</span>, <span class="n">f</span><span class="s">&quot;Was unable to locate a `.cruft.json` state file in `{directory}` !&quot;</span>
-
-        )
-
-        <span class="k">self</span>.<span class="n">directory</span> = <span class="n">directory</span>
+    <span class="nb">pass</span>
 </pre></div>
 
 
@@ -942,21 +1037,25 @@ set self.<strong>traceback</strong> to tb and return self.</p>
 
 <p>Exception.with_traceback(tb) --
 set self.<strong>traceback</strong> to tb and return self.</p>
-<h3 id="unabletofindcookiecuttertemplate">UnableToFindCookiecutterTemplate</h3>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">UnableToFindCookiecutterTemplate</span><span class="p">(</span>
-    <span class="n">directory</span>
+<h3 id="nocruftfound">NoCruftFound</h3>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">NoCruftFound</span><span class="p">(</span>
+    <span class="n">directory</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </pre></div>
 
 
-<p>Raised when Cruft is unable to find a cookiecutter template</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="n">UnableToFindCookiecutterTemplate</span>(<span class="n">CruftError</span>):
+<p>Raised when no .cruft.json state is found in the current directory</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="n">NoCruftFound</span>(<span class="n">CruftError</span>):
 
-    <span class="s">&quot;&quot;&quot;Raised when Cruft is unable to find a cookiecutter template&quot;&quot;&quot;</span>
+    <span class="s">&quot;&quot;&quot;Raised when no .cruft.json state is found in the current directory&quot;&quot;&quot;</span>
 
-    <span class="n">def</span> <span class="n">__init__</span>(<span class="k">self</span>, <span class="n">directory</span>):
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="k">self</span>, <span class="n">directory:</span> <span class="n">str</span>):
 
-        <span class="n">super</span>().<span class="n">__init__</span>(<span class="k">self</span>, <span class="n">f</span><span class="s">&quot;Was unable to locate a Cookiecutter template in `{directory}` !&quot;</span>)
+        <span class="n">super</span>().<span class="n">__init__</span>(
+
+            <span class="k">self</span>, <span class="n">f</span><span class="s">&quot;Was unable to locate a `.cruft.json` state file in `{directory}` !&quot;</span>
+
+        )
 
         <span class="k">self</span>.<span class="n">directory</span> = <span class="n">directory</span>
 </pre></div>
@@ -977,6 +1076,49 @@ set self.<strong>traceback</strong> to tb and return self.</p>
 
 <h4 id="methods_2">Methods</h4>
 <h5 id="with_traceback_2">with_traceback</h5>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">with_traceback</span><span class="p">(</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>Exception.with_traceback(tb) --
+set self.<strong>traceback</strong> to tb and return self.</p>
+<h3 id="unabletofindcookiecuttertemplate">UnableToFindCookiecutterTemplate</h3>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">UnableToFindCookiecutterTemplate</span><span class="p">(</span>
+    <span class="n">directory</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>Raised when Cruft is unable to find a cookiecutter template</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="n">UnableToFindCookiecutterTemplate</span>(<span class="n">CruftError</span>):
+
+    <span class="s">&quot;&quot;&quot;Raised when Cruft is unable to find a cookiecutter template&quot;&quot;&quot;</span>
+
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="k">self</span>, <span class="n">directory:</span> <span class="n">str</span>):
+
+        <span class="n">super</span>().<span class="n">__init__</span>(<span class="k">self</span>, <span class="n">f</span><span class="s">&quot;Was unable to locate a Cookiecutter template in `{directory}` !&quot;</span>)
+
+        <span class="k">self</span>.<span class="n">directory</span> = <span class="n">directory</span>
+</pre></div>
+
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro_3">Ancestors (in MRO)</h4>
+<ul>
+<li>cruft.exceptions.CruftError</li>
+<li>builtins.Exception</li>
+<li>builtins.BaseException</li>
+</ul>
+<h4 id="class-variables_3">Class variables</h4>
+<div class="codehilite"><pre><span></span><span class="n">args</span>
+</pre></div>
+
+
+<h4 id="methods_3">Methods</h4>
+<h5 id="with_traceback_3">with_traceback</h5>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">with_traceback</span><span class="p">(</span>
     <span class="o">...</span>
 <span class="p">)</span>

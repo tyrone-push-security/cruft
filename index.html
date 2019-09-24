@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#key-features" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -224,9 +228,71 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+      </label>
+    
     <a href="." title="Home" class="md-nav__link md-nav__link--active">
       Home
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    Key Features:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-project" class="md-nav__link">
+    Creating a New Project:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-a-project" class="md-nav__link">
+    Updating a Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-a-project" class="md-nav__link">
+    Checking a Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-create-cruft" class="md-nav__link">
+    Why Create cruft?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -430,6 +496,70 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    Key Features:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-project" class="md-nav__link">
+    Creating a New Project:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-a-project" class="md-nav__link">
+    Updating a Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-a-project" class="md-nav__link">
+    Checking a Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-create-cruft" class="md-nav__link">
+    Why Create cruft?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -451,7 +581,50 @@
 <hr />
 <p><a href="https://timothycrosley.github.io/cruft/">Read Latest Documentation</a> - <a href="https://github.com/timothycrosley/cruft/">Browse GitHub Code Repository</a></p>
 <hr />
-<p><strong>cruft</strong> Allows you to maintain all the necessary cruft for packaging and building projects separate from the code you intentionally write. Built on-top of CookieCutter.</p>
+<p><strong>cruft</strong> allows you to maintain all the necessary boilerplate for packaging and building projects separate from the code you intentionally write.
+Fully compatible with existing <a href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a> templates.</p>
+<p>Creating new projects from templates using cruft is easy:</p>
+<p><img alt="Example Usage New Project" src="https://raw.githubusercontent.com/timothycrosley/cruft/master/art/example.gif" /></p>
+<p>And, so is updating them as the template changes overtime:</p>
+<p><img alt="Example Usage New Project" src="https://raw.githubusercontent.com/timothycrosley/cruft/master/art/example_update.gif" /></p>
+<p>Many project template utilities exist that automate the copying and pasting of code to create new projects. This <em>seems</em> great! However, once created, most leave you with that copy-and-pasted code to manage through the life of your project.</p>
+<p>cruft is different. It automates the creation of new projects like the others, but then it also helps you to manage the boilerplate through the life of the project. cruft makes sure your code stays in-sync with the template it came from for you.</p>
+<h2 id="key-features">Key Features:</h2>
+<ul>
+<li><strong>Cookiecutter Compatible</strong>: cruft utilizes <a href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a> as its template expansion engine. Meaning it retains full compatibility with all existing <a href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a> templates.</li>
+<li><strong>Template Validation</strong>: cruft can quickly validate whether or not a project is using the latest version of a template using <code>cruft check</code>. This check can easily be added to CI pipelines to ensure your projects stay in-sync.</li>
+<li><strong>Automatic Template Updates</strong>: cruft automates the process of updating code to match the latest version of a template, making it easy to utilize template improvements across many projects.</li>
+</ul>
+<h2 id="installation">Installation:</h2>
+<p>To get started - install <code>cruft</code> using a Python package manager:</p>
+<p><code>pip3 install cruft</code></p>
+<p>OR</p>
+<p><code>poetry add cruft</code></p>
+<p>OR</p>
+<p><code>pipenv install cruft</code></p>
+<h2 id="creating-a-new-project">Creating a New Project:</h2>
+<p>To create a new project using cruft run <code>cruft create PROJECT_URL</code> from the command line.</p>
+<p>For example:</p>
+<div class="codehilite"><pre><span></span>    <span class="n">cruft</span> <span class="k">create</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">timothycrosley</span><span class="o">/</span><span class="n">cookiecutter</span><span class="o">-</span><span class="n">python</span><span class="o">/</span>
+</pre></div>
+
+
+<p>cruft will then ask you any necessary questions to create your new project. It will use your answers to expand the provided template, and then return the directory it placed the expanded project.
+Behind the scenes, cruft uses <a href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a> to do the project expansion. The only difference in the resulting output is a <code>.cruft.json</code> file that
+contains the git hash of the template used as well as the parameters specified.</p>
+<h2 id="updating-a-project">Updating a Project</h2>
+<p>To update an existing project, that was created using cruft, run <code>cruft update</code> in the root of the project.
+If there are any updates, cruft will have you review them before applying. If you accept the changes cruft will apply them to your project
+and update the <code>.cruft.json</code> file for you.</p>
+<h2 id="checking-a-project">Checking a Project</h2>
+<p>Checking to see if a project is missing a template update is as easy as running <code>cruft check</code>. If the project is out-of-date an error and exit code 1 will be returned.
+<code>cruft check</code> can be added to CI pipelines to ensure projects don't unintentionally drift.</p>
+<h2 id="why-create-cruft">Why Create cruft?</h2>
+<p>Since I first saw videos of <a href="https://www.youtube.com/watch?v=9EctXzH2dss">quickly</a> being used to automate Ubuntu application creation, I've had a love/hate relationship with these kinds of tools.
+I've used them for many projects and certainly seen them lead to productivity improvements. However, I've always felt like they were a double-edged sword. Sure, they would automate away the copying and pasting many would do to create projects. However, by doing so,
+they encouraged more code to be copied and pasted! Then, over time, you could easily be left with hundreds of projects that contained copy-and-pasted code with no way to easy way to update them. I created cruft to be a tool that recognized that balance between project creation and maintenance and provided mechanisms to keep built projects up-to-date.</p>
+<p>I hope you too find <code>cruft</code> useful!</p>
+<p>~Timothy Crosley</p>
                 
                   
                 
