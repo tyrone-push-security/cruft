@@ -544,6 +544,8 @@ it should maintain 1:1 compatibility with the programmatic API definition in the
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">up_to_date</span><span class="p">:</span>
 
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span>
 
             <span class="s2">&quot;FAILURE: Project&#39;s cruft is out of date! Run `cruft update` to clean this mess up.&quot;</span>
@@ -552,17 +554,37 @@ it should maintain 1:1 compatibility with the programmatic API definition in the
 
     <span class="k">else</span><span class="p">:</span>
 
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SUCCESS: Good work! Project&#39;s cruft is up to date and as clean as possible :).&quot;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">_update_output</span><span class="p">(</span><span class="n">updated</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">updated</span><span class="p">:</span>
 
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Nothing to do, project&#39;s cruft is already up to date!&quot;</span><span class="p">)</span>
 
     <span class="k">else</span><span class="p">:</span>
 
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Good work! Project&#39;s cruft has been updated and is as clean as possible!&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">_link_output</span><span class="p">(</span><span class="n">linked</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="n">linked</span><span class="p">:</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Project successfully linked to template!&quot;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Project linking failed :(&quot;</span><span class="p">)</span>
 
 <span class="n">cli</span> <span class="o">=</span> <span class="n">hug</span><span class="o">.</span><span class="n">cli</span><span class="p">(</span><span class="n">api</span><span class="o">=</span><span class="n">hug</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="n">logo</span><span class="o">.</span><span class="n">ascii_art</span><span class="p">))</span>
 
@@ -571,6 +593,8 @@ it should maintain 1:1 compatibility with the programmatic API definition in the
 <span class="n">cli</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">_update_output</span><span class="p">)(</span><span class="n">api</span><span class="o">.</span><span class="n">update</span><span class="p">)</span>
 
 <span class="n">cli</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">_check_command_output</span><span class="p">)(</span><span class="n">api</span><span class="o">.</span><span class="n">check</span><span class="p">)</span>
+
+<span class="n">cli</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">_link_output</span><span class="p">)(</span><span class="n">api</span><span class="o">.</span><span class="n">link</span><span class="p">)</span>
 </pre></div>
 
 
