@@ -1,6 +1,9 @@
+import importlib.resources as pkg_resources
 import json
 import os
+import shutil
 import sys
+import tempfile
 from functools import partial
 from pathlib import Path
 from shutil import move, rmtree
@@ -20,6 +23,8 @@ from cruft.exceptions import (
     NoCruftFound,
     UnableToFindCookiecutterTemplate,
 )
+
+from . import binaries
 
 try:
     import toml  # type: ignore
@@ -233,11 +238,15 @@ def update(
                     )
                 except CalledProcessError as error:
                     if b"unrecognized option `--merge'" in error.stderr:
-                        print(
-                            "Running patch with --no-backup-if-mismatch, this could silently fail"
-                            " to apply changes, verify changes with above diff."
-                        )
-                        run(["patch", "-p1", "--no-backup-if-mismatch"], input=diff.encode("utf8"))
+                        print("Extracting bundled version of 'patch' binary to temporary location")
+                        temp_folder = tempfile.mkdtemp()
+                        binary = pkg_resources.read_binary(binaries, "patch-2.7.6-macos")
+                        patch_path = os.path.join(temp_folder, "patch")
+                        with open(patch_path, "wb") as f:
+                            f.write(binary)
+                        os.chmod(patch_path, 0o700)
+                        run([patch_path, "-p1", "--merge"], input=diff.encode("utf8"))
+                        shutil.rmtree(temp_folder)
                     else:
                         print(error.stderr, file=sys.stderr)
 
